@@ -3,7 +3,7 @@
 
 # Add function that checks whether the git repository has modifications
 function parse_git_dirty {
-	[[ $(git status 2> /dev/null | tail -n1) != *"nothing to commit"* ]] && echo "*"
+	[[ $(git status 2> /dev/null | tail -n1) != *"nothing to commit"* ]] && echo '*'
 }
 
 # Add function to show which git branch my folder is selected
