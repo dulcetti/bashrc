@@ -40,6 +40,9 @@ PS1+="\[\033[33m\]@\u \[\033[0;97m\]\w"
 # Execute parse_git_branch function to show the current branch, reset the color and print $
 PS1+="\$(parse_git_branch)\[\033[00m\]$ "
 
+# Export the configuration
+export PS1
+
 # some ls and git aliases
 alias ls='ls -la --color=auto'
 alias gpdev='git pull origin develop'
