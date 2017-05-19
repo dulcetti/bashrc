@@ -31,9 +31,6 @@ function parse_git_branch {
 # Create PS1 with new empty line
 PS1="\n"
 
-# Set color to Light blue, show Date in format DD/MM/YYY and Hour in format HH:MM:SS and break line
-PS1+="\033[0;94m\D{%d/%m/%Y} - \T\n"
-
 # some ls and git aliases
 alias ls='ls -la --color=auto'
 alias gpdev='git pull origin develop'
