@@ -28,9 +28,6 @@ function parse_git_branch {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(parse_git_dirty)\) /"
 }
 
-# Create PS1 with new empty line
-PS1="\n"
-
 # some ls and git aliases
 alias ls='ls -la --color=auto'
 alias gpdev='git pull origin develop'
