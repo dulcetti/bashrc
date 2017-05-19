@@ -2,7 +2,6 @@
 [ -z "$PS1" ] && return
 
 # some ls and git aliases
-alias ls='ls -la --color=auto'
 alias gpdev='git pull origin develop'
 alias st='git status'
 alias ghdev='git push origin develop'
