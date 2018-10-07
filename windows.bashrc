@@ -46,6 +46,8 @@ export PS1
 # some ls and git aliases
 alias ls='ls -la --color=auto'
 alias gpdev='git pull origin develop'
+alias gpmaster='git pull origin master'
 alias st='git status'
 alias ghdev='git push origin develop'
 alias gitlol='git log --oneline --decorate --all --graph'
+alias -- -='cd -'
