@@ -72,3 +72,12 @@ function emulator { ( cd "$(dirname "$(whence -p emulator)")" && ./emulator "$@"
 
 # Set alias to shorten command and also fix the side-effect
 alias emu="$ANDROID_HOME/tools/emulator"
+
+# some ls and git aliases
+alias ls='ls -la --color=auto'
+alias gpdev='git pull origin develop'
+alias gpmaster='git pull origin master'
+alias st='git status'
+alias ghdev='git push origin develop'
+alias gitlol='git log --oneline --decorate --all --graph'
+alias -- -='cd -'
