@@ -44,3 +44,10 @@ PS1+="\$(parse_git_branch)\[\033[00m\]$ "
 
 # Export the configuration
 export PS1
+
+# some ls and git aliases
+alias ls='ls -la --color=auto'
+alias gpdev='git pull origin develop'
+alias st='git status'
+alias ghdev='git push origin develop'
+alias gitlol='git log --oneline --decorate --all --graph'
