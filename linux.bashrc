@@ -60,3 +60,15 @@ PS1+="\$(parse_git_branch)\[\033[00m\]$ "
 
 # Export the configuration
 export PS1
+
+# Android Studio (remove if you don't use)
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Configure android emulator to run directly in terminal.
+function emulator { ( cd "$(dirname "$(whence -p emulator)")" && ./emulator "$@"; ) }
+
+# Set alias to shorten command and also fix the side-effect
+alias emu="$ANDROID_HOME/tools/emulator"
