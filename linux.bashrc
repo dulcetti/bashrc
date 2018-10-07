@@ -45,3 +45,18 @@ function parse_git_branch {
 
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(parse_git_dirty)\) /"
 }
+
+# Create PS1 with new empty line
+PS1="\n"
+
+# Set color to Light blue, show Date in format DD/MM/YYY and Hour in format HH:MM:SS and break line
+PS1+="\033[0;94m\D{%d/%m/%Y} - \T\n"
+
+# Set color to yellow and show the user with @, set color to white and show the current path
+PS1+="\[\033[33m\]@\u \[\033[0;97m\]\w"
+
+# Execute parse_git_branch function to show the current branch, reset the color and print $
+PS1+="\$(parse_git_branch)\[\033[00m\]$ "
+
+# Export the configuration
+export PS1
